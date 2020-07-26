@@ -1,0 +1,77 @@
+package entities;
+
+public class Bank {
+	
+	private int accountNumber;
+	private String accountHolder;
+	private String initialDeposit;
+	private double initialValue;
+	
+	public Bank() {
+	}
+		
+	public Bank(int accountNumber, String accountHolder, String initialDeposit) {
+		super();
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.initialDeposit = initialDeposit;
+	}
+	
+	public Bank(int accountNumber, String accountHolder, String initialDeposit, double initialValue) {
+		super();
+		this.accountNumber = accountNumber;
+		this.accountHolder = accountHolder;
+		this.initialDeposit = initialDeposit;
+		this.initialValue = initialValue;
+	}
+
+	public int getAccountNumber() {
+		return accountNumber;
+	}
+
+	public void setAccountNumber(int accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+
+	public String getAccountHolder() {
+		return accountHolder;
+	}
+
+	public void setAccountHolder(String accountHolder) {
+		this.accountHolder = accountHolder;
+	}
+
+	public String getInitialDeposit() {
+		return initialDeposit;
+	}
+
+	public void setInitialDeposit(String initialDeposit) {
+		this.initialDeposit = initialDeposit;
+	}
+
+	public double getInitialValue() {
+		return initialValue;
+	}
+
+	public void setInitialValue(double initialValue) {
+		this.initialValue = initialValue;
+	}
+	
+	public void depositValue(double initialValue) {
+		initialValue += initialValue;
+	}
+	
+	public void withdrawValue(double initialValue) {
+		initialValue -= initialValue - 5;
+	}
+	
+	public String toString() {
+		return "Account " 
+				+ accountNumber
+				+ ", Holder: " 
+				+ accountHolder
+				+ ", "
+				+ "Balance: $ "
+				+ String.format("%.2f", initialValue);
+	}
+}

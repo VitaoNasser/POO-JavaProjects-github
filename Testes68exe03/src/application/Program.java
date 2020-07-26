@@ -1,0 +1,34 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Aluno;
+
+
+public class Program {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Aluno aluno = new Aluno();
+		
+		System.out.printf("Name: ");
+		aluno.name = sc.nextLine();
+		
+		System.out.printf("Nota 01: ");
+		aluno.notaPrimeiroTrimestre = sc.nextDouble();
+		System.out.printf("Nota 02: ");
+		aluno.notaSegundoTrimestre = sc.nextDouble();
+		System.out.printf("Nota 03: ");
+		aluno.notaTerceiroTrimestre = sc.nextDouble();
+		
+		System.out.println(aluno.finalGrade());
+		
+		System.out.println(aluno.result());
+		
+		sc.close();
+	}
+	
+}
